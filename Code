@@ -9,15 +9,15 @@ import json
 import pymongo
 from pymongo import MongoClient
 client = MongoClient()
-#you can use any database name in place of client_database2
+# you can use any database name in place of client_database2
 db = client.client_database2
-#you can use any collection name in place of client_collection1
+# you can use any collection name in place of client_collection1
 collection = db.client_collection1
 '''
 
 class TwitterClient(object):
     def __init__(self):
-        # keys and tokens from the Twitter Dev Console
+        # get your keys and tokens from https://apps.twitter.com
         consumer_key = 'your_key_here'
         consumer_secret = 'your_secret_here'
         access_token = 'your_access_token_here'
@@ -108,7 +108,7 @@ plt.pie(sizes, explode=explode, labels=labels, colors=colors,
 plt.axis('equal')
 plt.show()
 
-#Following code inserts the tweet and related sentiment of respective query into mongoDB database
+# Following code inserts the tweet and related sentiment of respective query into mongoDB database
 '''
 for t in tweets:
     tweet = t
